@@ -31,7 +31,9 @@ const InstrumentFamilies = function() {
 };
 
 InstrumentFamilies.prototype.bindEvents = function () {
+
   PubSub.publish('InstrumentFamilies:all-instruments', this.instrumentFamilies);
+  console.log('yo');
 
 };
 
