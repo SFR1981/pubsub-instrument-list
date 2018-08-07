@@ -27,6 +27,19 @@ ResultView.prototype.updateView = function (family) {
   description.textContent = `${family.description}`;
   this.container.appendChild(description);
 
+  const including = document.createElement('h2');
+  including.textContent = 'Instruments include:'
+  this.container.appendChild(including);
+  const list = document.createElement('ul');
+  family.instruments.forEach((instrument, index)=>{
+    const listElement = document.createElement('li');
+    listElement.textContent = instrument;
+    list.appendChild(listElement);
+  })
+  this.container.appendChild(list);
+  console.log(family.instruments);
+
+
 };
 
 
