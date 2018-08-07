@@ -5,6 +5,10 @@ const ResultView = require('./views/result_view.js');
 document.addEventListener('DOMContentLoaded', () => {
   console.log('JavaScript Loaded');
   console.log("yo");
+
+  const infoDiv = document.querySelector('div#instrument-family-info')
+  const resultView = new ResultView(infoDiv);
+  resultView.bindEvents();
   const dropDown = document.querySelector('select#instrument-families');
   const selectView = new SelectView(dropDown);
   selectView.bindEvents();
