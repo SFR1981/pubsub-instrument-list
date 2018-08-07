@@ -17,30 +17,51 @@ ResultView.prototype.bindEvents = function () {
 
 
 ResultView.prototype.updateView = function (family) {
-  const familyName = document.createElement('h1');
-  familyName.textContent = `${family.name}`;
-
   this.container.innerHTML = '';
-  this.container.appendChild(familyName);
+  this.renderFamilyName(family);
+  this.renderDescription(family);
+  this.renderIndluding();
+  this.renderList(family);
 
+
+};
+
+
+ResultView.prototype.renderFamilyName = function (family) {
+  const name = document.createElement('h1');
+  name.textContent = `${family.name}`;
+  this.container.appendChild(name);
+
+};
+
+ResultView.prototype.renderDescription = function (family) {
   const description = document.createElement('p');
   description.textContent = `${family.description}`;
   this.container.appendChild(description);
 
+};
+
+ResultView.prototype.renderIndluding = function () {
   const including = document.createElement('h2');
   including.textContent = 'Instruments include:'
   this.container.appendChild(including);
-  const list = document.createElement('ul');
-  family.instruments.forEach((instrument, index)=>{
-    const listElement = document.createElement('li');
-    listElement.textContent = instrument;
-    list.appendChild(listElement);
-  })
-  this.container.appendChild(list);
-  console.log(family.instruments);
-
 
 };
+
+ResultView.prototype.renderList = function (family) {
+
+    const list = document.createElement('ul');
+
+    family.instruments.forEach((instrument, index)=>{
+      const listElement = document.createElement('li');
+      listElement.textContent = instrument;
+      list.appendChild(listElement);
+    })
+    this.container.appendChild(list);
+
+};
+
+
 
 
 
