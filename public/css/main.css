@@ -1,0 +1,24 @@
+li {
+
+    transition-duration: 6s;
+
+}
+
+
+
+li:hover {
+  transform: scale(-1.3);
+  transition-duration: 1s;
+}
+
+
+p {
+    transition-duration: 6s;
+
+}
+
+p:hover {
+  transform: scale(0.1);
+  transition-duration: 1s;
+
+}
