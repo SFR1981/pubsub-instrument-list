@@ -28,7 +28,7 @@ ResultView.prototype.updateView = function (family) {
 
 
 ResultView.prototype.renderFamilyName = function (family) {
-  const name = document.createElement('h1');
+  const name = document.createElement('h2');
   name.textContent = `${family.name}`;
   this.container.appendChild(name);
 
@@ -42,7 +42,7 @@ ResultView.prototype.renderDescription = function (family) {
 };
 
 ResultView.prototype.renderIndluding = function () {
-  const including = document.createElement('h2');
+  const including = document.createElement('h3');
   including.textContent = 'Instruments include:'
   this.container.appendChild(including);
 
