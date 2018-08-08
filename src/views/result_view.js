@@ -52,7 +52,7 @@ ResultView.prototype.renderList = function (family) {
 
     const list = document.createElement('ul');
 
-    family.instruments.forEach((instrument, index)=>{
+    family.instruments.forEach((instrument)=>{
       const listElement = document.createElement('li');
       listElement.textContent = instrument;
       list.appendChild(listElement);
